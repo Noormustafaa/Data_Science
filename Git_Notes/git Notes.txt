@@ -1,0 +1,64 @@
+Git Clone To Push file
+
+ Step 1: Cloning the Remote Repository
+
+Before making any local changes, you need to copy the repository you created directly on GitHub onto your local machine. This is done using the `git clone` command followed by your repository's URL. Running this command downloads the entire project folder, along with its version history, to your computer and automatically configures the link between your local folder and GitHub.
+
+CMD
+git clone <YOUR_GITHUB_REPOSITORY_URL>
+
+
+
+# Step 2: Navigating into the Project Directory
+
+Once the repository is successfully cloned, a new folder matching the repository's name will be created on your computer. You must move your terminal's working directory inside this newly created folder using the `cd` (change directory) command before executing any further Git commands.
+
+```bash
+cd Data_Science
+
+```
+
+### Step 3: Setting Up the Folder Structure and Adding Files
+
+Now that you are inside the repository directory, you can manually or programmatically organize your project. Create the nested folders (`python_Programing/Python_Libraries/`) and save or copy your script (e.g., `numpy_basics.py`) inside the final destination folder. Git will immediately detect these new, untracked changes in the background.
+
+### Step 4: Checking the Repository Status
+
+Before staging your files, it is a best practice to verify which files have been modified, deleted, or created. Running the `git status` command will display the current state of your repository, showing your newly created folders and files in red, indicating they are currently "untracked" by Git.
+
+```bash
+git status
+
+```
+
+### Step 5: Staging the Changes
+
+To prepare your new files for a commit, you must move them from the untracked zone to the Staging Area. Using the `git add .` command instructs Git to track all new changes, folders, and files within the current directory, turning them from red to green in your status report.
+
+```bash
+git add .
+
+```
+
+### Step 6: Committing the Changes
+
+Once your files are staged, you need to save a snapshot of these changes to your local version history. The `git commit` command, paired with a descriptive message using the `-m` flag, permanently records what changes were made in this specific version of your project.
+
+```bash
+git commit -m "Add NumPy basics script to libraries folder"
+
+```
+
+### Step 7: Pushing the Changes to GitHub
+
+The final step is to upload your locally committed snapshots back to the online remote repository on GitHub. By running the `git push` command specifying the remote name (`origin`) and the target branch (`main` or `master`), your local code safely updates on GitHub for the world to see.
+
+```bash
+git push origin main
+
+```
+Note :
+Aap ko GitHub se woh naya folder apne Desktop par laane ke liye Git ko bolna parega ke "Bhai, online jo bhi naya maal aaya hai, use mere computer par le aao." Iske liye terminal me apne Data_Science folder ke andar ja kar sirf yeh aik simple command chalayein:
+
+Bash
+git pull origin main
