@@ -1,0 +1,33 @@
+Git & GitHub Essential Workflow: From Cloning to Troubleshooting.
+
+## 1. How to View Folders After Cloning a Repository
+
+Once you successfully clone a GitHub repository using the Git command line, your terminal will place you at the root directory or just outside the project folder. To find out what files and subfolders exist inside your current directory on Windows, you use a simple command line utility. By typing `dir` (which stands for Directory) and pressing Enter, Windows will instantly generate a structured list of every file and folder available in that exact path.
+
+Alternatively, if you prefer a visual interface rather than reading terminal text, you can leverage Visual Studio Code's native commands. Typing `code .` in your terminal instructs the system to launch the entire current directory directly into the VS Code workspace. This instantly reveals your full project structure, including all files and nested folders, inside the clean, organized file explorer sidebar on the left-hand side of your screen.
+
+---
+
+## 2. Resolving Missing or Invisible Folders After a Clone
+
+A very common point of confusion occurs when a folder visible on GitHub seems to completely disappear or fail to show up on your local computer after running a clone command. The primary cause for this is Git's core architecture: Git is fundamentally designed to track file contents, not empty directories. Therefore, if a folder on GitHub contains absolutely no files, Git will entirely ignore it during a standard transfer, causing it to remain invisible on your local machine until it contains data.
+
+Another frequent cause for this mismatch is a timing difference between your local computer and the cloud. If a folder or file was added to GitHub *after* you already completed your initial clone command, your computer will naturally be running behind the latest cloud version. To bridge this gap and pull the missing data down, you simply open your terminal inside the repository and execute `git pull origin main`. This command forces your local machine to look at the remote GitHub repository, grab any newly created folders or files, and instantly merge them onto your hard drive.
+
+---
+
+## 3. Step-by-Step Guide to Pushing Local Files to GitHub
+
+Once your folders are visible and you have successfully pasted or edited a file inside your local directory, uploading those changes back up to GitHub requires a standard three-step execution chain. The first step is staging, which you accomplish by typing `git add .` in your terminal. This command tells Git to take a snapshot of your current folder and prepare every single new, modified, or pasted file to be packaged for the upcoming upload.
+
+The second step is committing your changes, which acts as saving your progress with an official label. By running the command `git commit -m "Your Custom Message Here"`, you lock in your staged changes and attach a short, descriptive memo explaining exactly what files you added or what fixes you made. This practice is essential because it allows you and your team to look back at the repository history and understand the exact purpose of every single upload.
+
+The final step is pushing the data live to the internet. By executing `git push origin main` (or replacing `main` with `master` depending on your repository's default branch name), your system establishes a secure connection with GitHub's servers. This command safely transmits your committed files from your local computer's hard drive straight into the cloud repository, making your code permanently live and updating your GitHub profile instantly.
+
+---
+
+## 4. Handling Connection Errors and Network Timeouts
+
+During the final push phase, you might occasionally encounter a harsh error stating `fatal: unable to access... Failed to connect to github.com port 443`. This network block almost always indicates that Git is struggling to establish a stable pathway to GitHub's servers, usually triggered by a temporary internet drop, a restrictive local firewall, or an active VPN/Proxy software masking your connection. Turning off any active VPN or proxy tools is always the first troubleshooting step, as these programs frequently intercept and break Git's secure communication protocols.
+
+If your internet connection is simply running slow, Git might give up too quickly and time out before your files finish transferring. To solve this, you can run configuration commands such as `git config --global http.lowSpeedLimit 0` and `git config --global http.lowSpeedTime 999999` to effectively remove Git's low-speed restrictions and grant the system unlimited time to complete the upload. Additionally, resetting any accidental or corrupted proxy settings by entering `git config --global --unset http.proxy` ensures that your terminal has a completely clean, uninhibited route to the internet, allowing your next `git push` to succeed seamlessly.
