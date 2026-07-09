@@ -1,0 +1,721 @@
+03-Understanding-127.0.0.1-and-Port-5000
+
+
+
+```markdown
+# Understanding 127.0.0.1 and Port 5000 in Flask
+
+## Flask Request-Response Flow
+
+```
+
+Browser
+|
+| Request
+|
+Flask Server
+|
+| Python Code
+|
+Response
+|
+Browser Screen
+
+```
+
+---
+
+# Understanding Flask Server Address
+
+When we run a Flask application, we usually see this message in the terminal:
+
+```
+
+Running on [http://127.0.0.1:5000](http://127.0.0.1:5000)
+
+```
+
+This means:
+
+> Our Flask application is running on our local computer, and the browser can access it through this address.
+
+Let's understand each part step by step.
+
+---
+
+# What is 127.0.0.1?
+
+`127.0.0.1` is called **localhost**.
+
+It means:
+
+> The current computer itself.
+
+In simple words:
+
+When we use:
+
+```
+
+127.0.0.1
+
+```
+
+we are telling the browser:
+
+"Go to my own computer, not the internet."
+
+Example:
+
+```
+
+Browser
+|
+|
+My Computer
+|
+Flask Application
+
+```
+
+The browser and Flask server are running on the same machine.
+
+---
+
+# Why Do We Need Port Numbers?
+
+Your computer is not running only one application.
+
+At the same time, many programs can run:
+
+- Chrome
+- VS Code
+- WhatsApp
+- Spotify
+- MySQL
+- MongoDB
+- Flask
+
+Now the question is:
+
+> If a request comes to the computer, how does the computer know which application should receive that request?
+
+The answer is:
+
+## Ports
+
+Ports help the computer identify the correct application.
+
+---
+
+# Understanding Ports with a Real-Life Example
+
+Imagine your computer is an apartment building.
+
+The building address is:
+
+```
+
+127.0.0.1
+
+```
+
+This represents your computer.
+
+But inside the building, there are many apartments:
+
+```
+
+Building Address:
+127.0.0.1
+
+Apartment 80
+Apartment 443
+Apartment 3306
+Apartment 5000
+Apartment 8080
+Apartment 9000
+
+```
+
+If someone only knows the building address:
+
+```
+
+127.0.0.1
+
+```
+
+they will not know which apartment to visit.
+
+They also need the apartment number.
+
+In computers, this apartment number is called a:
+
+```
+
+Port Number
+
+```
+
+---
+
+# What is a Port Number?
+
+A port is like a door of a computer.
+
+Each application uses a different door.
+
+Example:
+
+```
+
+Computer (127.0.0.1)
+
+Port 3306  → MySQL
+
+Port 5432  → PostgreSQL
+
+Port 27017 → MongoDB
+
+Port 5000  → Flask
+
+Port 8000  → Flask/Django
+
+Port 8080  → Web Applications
+
+Port 22    → SSH
+
+Port 80    → HTTP Websites
+
+Port 443   → HTTPS Websites
+
+```
+
+---
+
+# Why Does Flask Use Port 5000?
+
+A common beginner question is:
+
+> Why does Flask use 5000?
+
+The answer:
+
+There is no special technical reason.
+
+The Flask developers selected:
+
+```
+
+5000
+
+```
+
+as the default port.
+
+It is just a convention.
+
+Similar to a school assigning classrooms:
+
+```
+
+Class 9A → Room 5
+
+Class 10A → Room 8
+
+```
+
+Flask says:
+
+```
+
+My default room is Port 5000
+
+````
+
+---
+
+# Can We Change Flask Port?
+
+Yes.
+
+Example:
+
+```python
+app.run(port=8000)
+````
+
+Now Flask will run on:
+
+```
+http://127.0.0.1:8000
+```
+
+instead of:
+
+```
+http://127.0.0.1:5000
+```
+
+---
+
+# Understanding URL Structure
+
+Suppose we open:
+
+```
+http://127.0.0.1:5000
+```
+
+The browser divides this address into parts:
+
+```
+http://127.0.0.1:5000
+
+http
+127.0.0.1
+5000
+```
+
+Let's understand each part.
+
+---
+
+# Part 1: HTTP
+
+```
+http
+```
+
+HTTP is a communication protocol.
+
+It defines how the browser and server communicate.
+
+Just like humans use languages:
+
+```
+Person A → Urdu
+Person B → Urdu
+
+Communication is possible.
+```
+
+Similarly:
+
+```
+Browser → HTTP
+Flask Server → HTTP
+```
+
+They understand each other.
+
+---
+
+# Part 2: 127.0.0.1
+
+```
+127.0.0.1
+```
+
+This is the computer address.
+
+It means:
+
+"Go to my own machine."
+
+---
+
+# Part 3: Port 5000
+
+```
+5000
+```
+
+This tells the computer:
+
+"Go to the application running on port 5000."
+
+In our case:
+
+```
+Port 5000 = Flask Server
+```
+
+---
+
+# What Happens When We Open Flask URL?
+
+Suppose we enter:
+
+```
+http://127.0.0.1:5000
+```
+
+in the browser.
+
+The browser thinks:
+
+```
+Computer Address:
+127.0.0.1
+
+Application Door:
+5000
+```
+
+Then the browser sends a request:
+
+```
+Hello computer,
+
+Is any application running on Port 5000?
+```
+
+Flask responds:
+
+```
+Yes, I am Flask.
+```
+
+The browser says:
+
+```
+The user wants the Home Page.
+```
+
+Flask checks the route:
+
+```python
+@app.route("/")
+```
+
+Then Flask executes:
+
+```python
+def home():
+    return "Hello World"
+```
+
+Finally Flask sends:
+
+```
+Hello World
+```
+
+back to the browser.
+
+The browser displays:
+
+```
+Hello World
+```
+
+---
+
+# What Happens If the Port Is Empty?
+
+Suppose Flask is running on:
+
+```
+127.0.0.1:5000
+```
+
+But you open:
+
+```
+127.0.0.1:7000
+```
+
+The browser asks:
+
+```
+Is any application running on Port 7000?
+```
+
+No application responds.
+
+Therefore the browser shows:
+
+```
+Connection Refused
+```
+
+or:
+
+```
+This site can't be reached
+```
+
+because no server is available on that port.
+
+---
+
+# University Example
+
+Imagine your university:
+
+```
+University Address:
+Sukkur IBA University
+```
+
+Inside the university, there are different classrooms:
+
+```
+Room 101
+
+Room 102
+
+Room 201
+
+Room 301
+```
+
+If someone says:
+
+"I am going to Sukkur IBA."
+
+Can they find a specific teacher?
+
+No.
+
+They also need the classroom number.
+
+Similarly:
+
+```
+127.0.0.1
+```
+
+only tells the computer.
+
+```
+5000
+```
+
+tells which application to access.
+
+---
+
+# Flask Routes Concept
+
+Flask runs on one port:
+
+```
+127.0.0.1:5000
+```
+
+But inside the Flask application, we can have multiple pages.
+
+Example:
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def home():
+    return "Home Page"
+
+
+@app.route("/about")
+def about():
+    return "About Page"
+
+
+@app.route("/contact")
+def contact():
+    return "Contact Page"
+
+
+app.run(debug=True)
+```
+
+---
+
+# Understanding Routes
+
+When we open:
+
+```
+http://127.0.0.1:5000/
+```
+
+The browser:
+
+1. Goes to the computer:
+
+```
+127.0.0.1
+```
+
+2. Enters Flask application:
+
+```
+Port 5000
+```
+
+3. Requests:
+
+```
+/
+```
+
+Flask finds:
+
+```python
+@app.route("/")
+```
+
+and runs:
+
+```python
+home()
+```
+
+Response:
+
+```
+Home Page
+```
+
+---
+
+If we open:
+
+```
+http://127.0.0.1:5000/about
+```
+
+The browser:
+
+1. Goes to the same computer:
+
+```
+127.0.0.1
+```
+
+2. Enters the same Flask server:
+
+```
+Port 5000
+```
+
+3. Requests:
+
+```
+/about
+```
+
+Flask finds:
+
+```python
+@app.route("/about")
+```
+
+and executes:
+
+```python
+about()
+```
+
+Response:
+
+```
+About Page
+```
+
+---
+
+# Complete URL Breakdown
+
+Example:
+
+```
+http://127.0.0.1:5000/about
+
+
+http        → Communication Protocol
+
+127.0.0.1   → Computer Address
+
+5000        → Port Number (Application Door)
+
+/about      → Route (Specific Page)
+```
+
+---
+
+# Important Concepts Summary
+
+| Component | Meaning                                           |
+| --------- | ------------------------------------------------- |
+| 127.0.0.1 | Your own computer (localhost)                     |
+| Port 5000 | Flask application's door                          |
+| HTTP      | Communication language between browser and server |
+| Route     | Specific page inside Flask application            |
+| Request   | Browser asks server for something                 |
+| Response  | Server sends data back to browser                 |
+
+---
+
+# Final Flask Flow
+
+```
+User Opens Browser
+
+        ↓
+
+http://127.0.0.1:5000/about
+
+        ↓
+
+Computer receives request
+
+        ↓
+
+Port 5000 finds Flask Server
+
+        ↓
+
+Flask checks route "/about"
+
+        ↓
+
+Function executes
+
+        ↓
+
+Response sent to browser
+
+        ↓
+
+Page displayed
+```
+
+---
+
+## Practice Question
+
+If Flask is running on:
+
+```
+http://127.0.0.1:5000
+```
+
+and you open:
+
+```
+http://127.0.0.1:5000/contact
+```
+
+What is the purpose of:
+
+1. `127.0.0.1`
+2. `5000`
+3. `/contact`
+
+`
