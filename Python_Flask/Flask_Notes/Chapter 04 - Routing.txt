@@ -1,0 +1,549 @@
+Chapter 04 - Flask Routing
+
+What is Routing?
+
+Routing is one of the most important concepts in Flask. In simple words, **routing is the process of connecting a URL (web address) with a specific Python function.
+
+Whenever a user enters a URL in the browser, Flask checks that URL and decides which Python function should execute to handle that request.
+
+For example, when a user opens:
+
+
+
+[http://127.0.0.1:5000/about](http://127.0.0.1:5000/about)
+
+```
+
+Flask identifies the `/about` part and finds the function that is connected with this route. Then Flask executes that function and sends the response back to the browser.
+
+---
+
+## Understanding Routing with a Real-Life Example
+
+Imagine a university. The university has one main address, but inside the university there are different departments such as Computer Science, Electrical Engineering, and Business.
+
+If a student wants to go to the Computer Science department, the university gate does not send the student randomly. It checks the requirement and directs the student to the correct department.
+
+In this example:
+
+```
+
+University Address = Website
+
+Department = Route
+
+```
+
+Similarly, in Flask:
+
+- The website address represents the main application.
+- Routes represent different pages or sections of the website.
+
+Routing helps Flask understand which page the user wants to access.
+
+---
+
+## Why Do We Need Routing?
+
+Suppose we have a website:
+
+```
+
+[www.mywebsite.com](http://www.mywebsite.com)
+
+```
+
+Now a user opens:
+
+```
+
+[www.mywebsite.com/about](http://www.mywebsite.com/about)
+
+````
+
+Flask needs a way to understand that the user wants the About page.
+
+Without routing, Flask would not know which code should execute for the `/about` URL.
+
+Routing solves this problem by creating a connection between URLs and Python functions.
+
+---
+
+# Basic Flask Route Example
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def home():
+    return "Welcome to Home Page"
+
+
+app.run(debug=True)
+````
+
+In this example, `@app.route("/")` is called a route decorator.
+
+It tells Flask:
+
+"If a user visits the `/` URL, execute the function below this route."
+
+When the user opens:
+
+```
+http://127.0.0.1:5000/
+```
+
+Flask searches for a matching route:
+
+```
+@app.route("/")
+```
+
+The route matches, so Flask executes:
+
+```python
+home()
+```
+
+The function returns:
+
+```
+Welcome to Home Page
+```
+
+and this response is displayed in the browser.
+
+---
+
+# Understanding URL Structure in Flask
+
+A Flask URL looks like this:
+
+```
+http://127.0.0.1:5000/about
+```
+
+Each part has a different purpose:
+
+```
+127.0.0.1 = Computer Address
+
+5000 = Port Number where Flask is running
+
+/about = Route
+```
+
+The browser first connects to the computer, then it connects to the Flask application through port 5000, and finally Flask checks the route to find the correct function.
+
+---
+
+# Multiple Routes in Flask
+
+A real website usually contains multiple pages, such as:
+
+* Home Page
+* About Page
+* Contact Page
+* Services Page
+
+Flask allows us to create multiple routes for different pages.
+
+Example:
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def home():
+    return "Home Page"
+
+
+@app.route("/about")
+def about():
+    return "About Page"
+
+
+@app.route("/contact")
+def contact():
+    return "Contact Page"
+
+
+app.run(debug=True)
+```
+
+Now different URLs will execute different functions.
+
+When the user opens:
+
+```
+http://127.0.0.1:5000/
+```
+
+Flask matches:
+
+```
+/
+```
+
+and runs:
+
+```python
+home()
+```
+
+Output:
+
+```
+Home Page
+```
+
+---
+
+When the user opens:
+
+```
+http://127.0.0.1:5000/about
+```
+
+Flask matches:
+
+```
+/about
+```
+
+and runs:
+
+```python
+about()
+```
+
+Output:
+
+```
+About Page
+```
+
+---
+
+When the user opens:
+
+```
+http://127.0.0.1:5000/contact
+```
+
+Flask matches:
+
+```
+/contact
+```
+
+and runs:
+
+```python
+contact()
+```
+
+Output:
+
+```
+Contact Page
+```
+
+---
+
+# How Flask Routing Works?
+
+The complete routing flow is:
+
+```
+Browser
+
+↓
+
+User enters URL
+
+↓
+
+Flask receives request
+
+↓
+
+Flask Router searches matching route
+
+↓
+
+Matching @app.route() is found
+
+↓
+
+Connected Python function executes
+
+↓
+
+Function returns response
+
+↓
+
+Browser displays result
+```
+
+---
+
+# Route Name and Function Name
+
+The route name and function name do not need to be the same.
+
+Example:
+
+```python
+@app.route("/student")
+def abc():
+    return "Student Page"
+```
+
+Here:
+
+Route:
+
+```
+/student
+```
+
+Function:
+
+```
+abc()
+```
+
+Flask does not care about the function name.
+
+It only cares about the URL route and which function is connected to it.
+
+However, using meaningful function names is considered a good programming practice because it makes the code easier to understand.
+
+Good example:
+
+```python
+@app.route("/students")
+def students():
+    return "Students"
+```
+
+Bad example:
+
+```python
+@app.route("/students")
+def xyz123():
+    return "Students"
+```
+
+---
+
+# Dynamic Routing
+
+Dynamic routing allows Flask to handle changing values inside URLs.
+
+For example, imagine a website with thousands of students.
+
+Creating separate routes like:
+
+```
+/student1
+/student2
+/student3
+```
+
+is not practical.
+
+Instead, we use dynamic routes.
+
+Example:
+
+```python
+@app.route("/student/<name>")
+def student(name):
+    return "Hello " + name
+```
+
+Now the same function can handle different users.
+
+If the user opens:
+
+```
+http://127.0.0.1:5000/student/Ali
+```
+
+Output:
+
+```
+Hello Ali
+```
+
+If the user opens:
+
+```
+http://127.0.0.1:5000/student/Ahmed
+```
+
+Output:
+
+```
+Hello Ahmed
+```
+
+The route remains the same, but the value of `<name>` changes.
+
+---
+
+# Dynamic Routing Real-Life Example
+
+YouTube is a good example of dynamic routing.
+
+YouTube has millions of videos.
+
+It does not create a separate function for every video.
+
+Instead, it uses a dynamic route concept like:
+
+```
+/watch/<video_id>
+```
+
+The video ID changes, but the same route handles different videos.
+
+---
+
+# HTTP Methods with Routing
+
+Flask routes can also define which type of HTTP request they accept.
+
+Example:
+
+```python
+@app.route("/login", methods=["POST"])
+def login():
+    return "Login Successful"
+```
+
+This means that this route only accepts POST requests.
+
+Common HTTP methods are:
+
+| Method | Purpose                   |
+| ------ | ------------------------- |
+| GET    | Retrieve data from server |
+| POST   | Send data to server       |
+| PUT    | Update existing data      |
+| DELETE | Remove data               |
+
+---
+
+# Flask Routing Summary
+
+Routing is the connection between a URL and a Python function.
+
+| Concept       | Meaning                         |
+| ------------- | ------------------------------- |
+| Route         | The URL path of a page          |
+| @app.route()  | Connects URL with a function    |
+| Function      | Returns a response              |
+| Dynamic Route | Handles changing values in URLs |
+| GET           | Used for receiving data         |
+| POST          | Used for sending data           |
+
+---
+
+# Complete Flask Routing Example
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def home():
+    return "Welcome Home"
+
+
+@app.route("/profile")
+def profile():
+    return "User Profile"
+
+
+@app.route("/user/<name>")
+def user(name):
+    return "Hello " + name
+
+
+app.run(debug=True)
+```
+
+Testing:
+
+URL:
+
+```
+127.0.0.1:5000/
+```
+
+Output:
+
+```
+Welcome Home
+```
+
+---
+
+URL:
+
+```
+127.0.0.1:5000/profile
+```
+
+Output:
+
+```
+User Profile
+```
+
+---
+
+URL:
+
+```
+127.0.0.1:5000/user/Noor
+```
+
+Output:
+
+```
+Hello Noor
+```
+
+---
+
+# One Line Remember
+
+**Routing is the process of connecting browser URLs with Python functions in Flask.**
+
+Example:
+
+```
+/about     → about()
+
+/contact   → contact()
+
+/profile   → profile()
+```
+
+Routing is the foundation of Flask. Once routing is clear, connecting HTML pages with Flask using templates becomes much easier.
+
+``
