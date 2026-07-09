@@ -1,0 +1,8 @@
+Flask Outline
+
+📘 Chapter 01 - Introduction to Flask
+📘 Chapter 02 - Hello World Explained
+📘 Chapter 03 - Localhost (127.0.0.1) & Port 5000
+📘 Chapter 04 - Routing
+📘 Chapter 05 - Dynamic Routes
+📘 Chapter 06 - HTML Templates
