@@ -1,0 +1,91 @@
+ Flask HTML Templates
+
+In Flask, **HTML Templates** are used to create dynamic web pages. When you need to display different data for each user (such as their name or profile), you pass Python data into an HTML file.
+
+---
+
+## 1. Definition (What are Templates?)
+
+When we write `return "<h1>Hello World</h1>"` in Flask, it works fine for small web pages. However, if you want to design a complete, large web page, writing so much HTML inside the Python code becomes very difficult.
+
+The solution to this is **HTML Templates**. You keep your HTML code in separate files and use Flask's **Jinja2 Template Engine** to insert dynamic Python data (variables, loops, conditions) into them.
+
+### Key Rules:
+
+* All your HTML files must be placed inside a specific folder, which **must** be named **`templates`**.
+* In Flask, the **`render_template`** function is used to display (render) the template.
+
+---
+
+## 2. Practical Example (Step-by-Step)
+
+We will build a simple web application that welcomes a user with their name.
+
+### Step 1: Project Structure (Folder Layout)
+
+First, create a new folder inside your main project directory and name it `templates`. Your structure should look exactly like this:
+
+```text
+my_flask_app/
+│
+├── app.py               (Your main Python file)
+└── templates/           (This folder must have this exact name)
+    └── welcome.html     (Your HTML file)
+
+```
+
+---
+
+### Step 2: Create the HTML Template (`welcome.html`)
+
+Inside the `templates` folder, create a file named `welcome.html` and add the following code.
+
+Here, we use **`{{ user_name }}`**. In Jinja2, double curly braces mean that the variable sent from `app.py` will be printed here.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Page</title>
+</head>
+<body>
+    <!-- Jinja2 Variable: The name coming from app.py will be displayed here -->
+    <h1>Salam, {{ user_name }}!</h1>
+    <p>Welcome to our website. We are glad you are here.</p>
+</body>
+</html>
+
+```
+
+---
+
+### Step 3: Create the Flask App (`app.py`)
+
+Now, write the Flask code in your main `app.py` file. We will import `render_template` and pass the name to the HTML using a dynamic route.
+
+```python
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+# Dynamic Route that captures the name from the URL
+@app.route('/welcome/<name>')
+def welcome(name):
+    # render_template takes the HTML file name as the first argument,
+    # and the data you want to send to the HTML as the remaining arguments.
+    return render_template('welcome.html', user_name=name)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+```
+
+---
+
+### Step 4: Run and Test
+
+1. Run your `app.py` file.
+2. Open your browser and navigate to this URL: `[http://127.0.0.1:5000/welcome/Ali](http://127.0.0.1:5000/welcome/Ali)`
+3. You will see **"Salam, Ali!"** written on the screen.
+4. If you change the URL to `[http://127.0.0.1:5000/welcome/Zainab](http://127.0.0.1:5000/welcome/Zainab)`, the page will automatically update to display **"Salam, Zainab!"**.
