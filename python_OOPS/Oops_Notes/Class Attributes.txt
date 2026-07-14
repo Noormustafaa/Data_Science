@@ -1,0 +1,55 @@
+Class Attributes.
+
+Note : Jo Cheez Common Hotii hai Saare Objects K liye to Hum usy Class Attributes bana dety hai 
+aur un ko access karne k liye 
+
+	0r
+
+We define class attributes for properties that are common to all objects of that class. To access them, we use the class name or the object instance with dot notation.
+
+
+	Class.attr
+	or
+	obj.attr 
+
+
+class Student:
+    college_name = "ABC College"
+
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+        print("adding new student in Database..")
+
+
+s1 = Student("karan", 97)
+print(s1.name, s1.marks)  # karan
+
+s2 = Student("arjun", 88)
+print(s2.name, s2.marks)
+
+print(s2.college_name)
+
+
+
+---..>
+
+
+When The Class Attribute and the Object attribute name are same then 
+there will be always object Attribute has the heigh priority 
+
+
+```python
+class Student:
+    college_name = "ABC College"
+    name = "anonymous" #class attr
+
+    def __init__(self, name, marks):
+        self.name = name #obj attr > class attr
+        self.marks = marks
+        print("adding new student in Database..")
+
+s1 = Student("karan", 97)
+print(s1.name)
+
+```
