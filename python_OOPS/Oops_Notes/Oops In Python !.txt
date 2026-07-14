@@ -14,7 +14,7 @@ Which Provide
 1: Redundancy
 2: reusability 
 
-Class and Object in Python 
+Class and Object in Python Programing
 
 Class Is a Blueprint For Creating Objects 
 
