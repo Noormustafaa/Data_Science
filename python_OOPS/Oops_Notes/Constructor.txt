@@ -1,0 +1,23 @@
+Construct ?
+
+Constructor in python is the --init--Function 
+
+it's the special function which is present in every class . 
+
+The Constructor invoke(Execute) while the Creation Of The Object 
+
+Note : Conctructor Always Take An argument Which is called a self ,
+	perameter . first perameter always self 
+	
+	self means the new object we create 
+like s1=Students()
+
+
+Note : It is Not compulsory that we will use always self worf we can assign any word
+
+
+Defination : The Self Perameter is the reference to the current instance of the class , and is used to access 
+variables that belongs to the class 
+
+
+Note : The Data Which is Stored inside the Class is Attributes 
