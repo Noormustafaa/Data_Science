@@ -1,0 +1,30 @@
+Oops In Python !
+
+class ?
+
+Def: To Map with real World Scenarios, We started using Objects in Code .
+This Is Called Object Oriented Programing.
+
+Before it we write code !
+Procedural--> Where We Write Code in Sequence in step by step 
+
+Then Function (Called Functional Programing)
+
+Which Provide 
+1: Redundancy
+2: reusability 
+
+Class and Object in Python 
+
+Class Is a Blueprint For Creating Objects 
+
+#Objects are the instance 
+
+
+class Students:
+    
+	name="Noor"
+
+s1=Students()
+
+print(s1.name)
