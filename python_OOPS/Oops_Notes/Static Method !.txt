@@ -1,0 +1,13 @@
+Static Method !
+Methods That Don't Use  the Self Parameter (Work at class Level)
+
+	class Student:
+	    @staticmethod   #decoder 
+
+	def collage():
+	  print("ABC College") 
+
+	Student.collage()
+
+
+#Note We don't Use The self Parameter 
