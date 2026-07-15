@@ -1,0 +1,42 @@
+Methods !
+
+Methods are Functions that belongs to objects.
+
+Note : in Class There Are Two Things
+
+	Data and Methods 
+data: means Attributes (Properties)
+Methods : (Actions) what we are doing . mean how that attribute run !
+
+Note Like in 
+String 
+List 
+Dictionary 
+
+These are all methods . because all these have classes and we create first object then for that object we use 
+methods 
+
+
+ex 
+
+
+
+# creating class
+class Student:
+    def __init__(self, fullname):
+        self.name = fullname
+       
+
+    def hello(self):
+        print("hello", self.name)
+
+
+    def welcome(self):
+        print("welcome", self.name)
+
+
+# creating object
+s1 = Student("karan")
+s1.hello()
+s1.welcome()
+
