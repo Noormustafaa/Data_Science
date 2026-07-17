@@ -1,0 +1,20 @@
+Encapsulation !
+
+Wrapping data and Functions into a single unit (Object):
+
+Think of it as a protective shield. Instead of letting anyone change your data directly, you make them use specific "buttons" or methods you provide.
+
+When you want to withdraw money, your bank account balance is the hidden data.
+
+Direct Access (No Encapsulation): Walking behind the ATM counter, opening the safe, and grabbing the cash yourself. If everyone did this, someone would eventually break the system or make a mistake.
+
+Encapsulated Access: You use the ATM screen. The screen is the public interface (the "buttons"). You type in how much you want, and the machine safely handles your account balance behind the scenes.
+
+
+To use encapsulation in your daily programming, you follow a simple 3-step pattern:
+
+Hide the data by putting a double underscore (__) before the variable name inside your class.
+
+Create a "Getter" method (a public function) to let people view the data safely.
+
+Create a "Setter" method (a public function) to let people change the data safely, adding rules to block bad inputs.
