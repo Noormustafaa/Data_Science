@@ -1,0 +1,16 @@
+Abstraction !
+
+There Are mainly four pillars of Oops .
+
+Abstraction ,Encapsulation , Inheritance , Polymorphisam 
+
+--Abstraction ! means Hiding The Implementation Details of a class and only showing the Essential Features To the 
+Users!
+
+In English Abstraction Means Hidden , or the thing which is Not Clear .
+
+means inside the class how things are implemented we hide these things and we just show the user just important 
+Features , means the things which are unnecessary we hide those !
+Ex: when Driver Start the Car , internally what process is going to be happen inside the engine that thing Driver
+don't know but as such when Driver press the clutch or acceletor which are useful to the user .
+ 
