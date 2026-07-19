@@ -1,0 +1,67 @@
+Inheritance :
+When One Class (Child/derived) Drives the Properties And Methods of Another 
+class (Parent/base)
+
+class car:
+
+  ----
+
+
+
+class ToyotaCar(Car):
+
+Types Of Inheritance :
+
+Single Inheritance 
+
+Multi-Level inheritance 
+
+Multiple Inheritance 
+
+
+
+Single Inheritance 
+
+	Base Class     (parent Class)
+
+	    |
+	Derived Class  ( Child Class )
+
+
+
+above program is the Example of The Single Inheritance 
+
+
+
+Multilevel Inheritance 
+
+
+        Base Class     (parent Class)
+
+	    |
+	Derived Class  ( Child Class )->(Parent Class Of Below Class)
+
+
+	    |
+
+
+        Derived Class  (Child class)
+
+
+
+--Multiple 
+
+ Base1[Parent1]        Base2[Parent2]
+      
+
+
+
+		 Derived [Child]
+
+
+
+  
+
+
+
+
