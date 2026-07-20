@@ -1,0 +1,50 @@
+Data_Cleaning
+
+1. Handle Missing Values
+
+* Check which columns have missing values (nulls)
+
+
+
+2: Strategies to handle
+* Drop missing rows/columns (only if very few)
+* Impute with:
+* Mean/Median : for numerical data
+* Mode : for categorical data
+* Advanced: Linear regression, KNN, or interpolation (for future learning)
+
+
+2. Remove Duplicates
+
+* Detect and drop exact duplicate rows
+
+
+
+3. Fix Data Types
+
+* Convert wrong types (e.g., numbers stored as strings, dates as text)
+
+
+
+4. Handle Inconsistent Categories
+
+* Clean up categorical values like:
+* "Male", "male", "MALE"->should all become "male"
+* "Yes", "yes", "Y" -> unify to one format
+
+
+
+5. Detect and Handle Outliers
+
+* Use boxplots, IQR, or Z-score
+* Handle by:
+* Removing (if clearly wrong)
+* Capping (e.g., to 95th percentile)
+
+
+
+
+7. Fix Logic or Domain Errors
+
+* E.g., age = -5 is invalid, or BMI = 150 likely an error
+* Can replace with mean, median, or remove
