@@ -1,0 +1,56 @@
+Steps To Build ML Model.
+
+
+
+ 1. Problem Definition
+Definition:** Clearly understanding and defining the business problem you want to solve, determining if machine learning is the right tool, and identifying the inputs and target outputs.
+* **Example:** A bank wants to reduce financial loss by automatically identifying which credit card transactions are fraudulent before processing them.
+
+ 2. Data Collection
+
+Definition:** Gathering all the relevant, historical data required to solve the defined problem from various sources like databases, APIs, or files.
+*Example:** The bank pulls a massive dataset containing millions of past transactions, tracking details like purchase amount, location, time, and whether the transaction was later flagged as fraud.
+
+ 3. Exploratory Data Analysis (EDA)
+Definition:** Analyzing the dataset using visual graphs and statistics to understand its main characteristics, find patterns, spot anomalies, and see how variables relate to each other.
+* **Example:** Plotting charts to see if fraudulent transactions happen more frequently at midnight or if they typically involve unusually large dollar amounts compared to normal spending.
+
+ 4. Data Preprocessing / Cleaning
+
+Definition:** Fixing errors in the data by handling missing values, removing duplicate entries, correcting inconsistencies, and converting text or categories into numbers.
+* **Example:** Filling in missing customer location data, removing identical double-logged transactions, and changing text categories like "Approved" and "Denied" into $1$ and $0$.
+
+ 5. Feature Selection & Engineering
+
+Definition:** Selecting the most relevant pieces of information (features) for the model and creating brand-new inputs from existing ones to help the algorithm learn better.
+* **Example:** Calculating a new metric called "distance from home address" based on the transaction location, which makes it much easier for the model to spot suspicious, far-away purchases.
+
+6. Split the Dataset
+
+* **Definition:** Dividing your total dataset into separate portions—typically a training set to teach the model and a testing set to evaluate how well it actually learned.
+* **Example:** Taking $80\%$ of the historical transaction records to train the algorithm and hiding the remaining $20\%$ so you can check if the model can accurately spot fraud on data it hasn't seen yet.
+
+### 7. Model Selection
+
+* **Definition:** Choosing the right machine learning algorithm (e.g., Logistic Regression, Decision Tree, or Support Vector Machine) that fits the structure of your data and problem type.
+* **Example:** Selecting a Logistic Regression model because the task is a binary classification problem (predicting a simple "Yes, it is fraud" or "No, it isn't").
+
+### 8. Model Training
+
+* **Definition:** Feeding the training data into the chosen algorithm so it can automatically discover the mathematical rules, patterns, and connections between inputs and outputs.
+* **Example:** Letting the algorithm look at thousands of examples of fraud so it learns that a high-value purchase made far from home at $3\text{ AM}$ is highly likely to be unauthorized.
+
+ 9. Model Evaluation
+
+Definition:** Testing the trained model on your hidden test dataset to measure its performance using metrics like accuracy, precision, and recall.
+* **Example:** Passing the remaining $20\%$ of transactions through the model to check what percentage of fraudulent activities it successfully caught and how many normal transactions it mistakenly blocked.
+
+10. Hyperparameter Tuning
+
+* **Definition:** Tweaking the external configuration settings (knobs and dials) of the algorithm to optimize its performance and get the highest possible accuracy.
+* **Example:** Adjusting the learning rate or maximum depth of a decision tree to stop the model from memorizing the data too strictly, ensuring it works perfectly on future real-world transactions.
+
+11. Model Testing / Validation
+
+* **Definition:** Doing a final check on completely fresh, unseen data (or in a simulated environment) to ensure the model generalizes well and is ready to be safely deployed.
+* **Example:** Running the finalized model on live, incoming day-to-day transactions in a safe sandbox environment to verify it works reliably in real-time before fully replacing the old system.
