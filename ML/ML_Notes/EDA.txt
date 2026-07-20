@@ -1,0 +1,78 @@
+EDA:
+
+
+EDA stands for Exploratory Data Analysis — it's the step where you explore the data to:
+
+* Understand it
+* Discover patterns
+* Spot anomalies
+* Generate insights
+* And decide what to do next
+
+Think of EDA as detective work — you're looking at your data with curiosity before building any models or doing fancy transformations.
+
+
+
+# EDA Steps
+
+1. Viewing the Data
+
+* head(), tail(), shape, info()
+* What columns do I have? What types of data?
+
+
+
+
+2. Summary Statistics
+
+* mean, median, mode, std, min, max, quartiles
+* Helps understand spread and central tendency
+
+
+
+
+3. Value Counts
+
+* How many unique values in a column?
+* Great for categorical columns
+
+
+
+
+4. Missing Value Analysis
+
+* Where are the gaps? What percent of the data is missing?
+
+
+
+Here is the text transcribed from the image:
+
+# EDA Steps
+
+5. Visualizations
+
+* Histograms: distribution of values
+* Boxplots :outliers and spread
+* Bar plots : comparisons of categories
+* Correlation heatmaps : linear relationships between numerical features
+* Scatter plots : bivariate relationships
+
+
+
+
+
+6. Target Variable Exploration
+
+* How does your output (like 'charges' in your dataset) relate to other variables?
+
+
+
+
+
+
+# EDA Importance
+
+* You can't clean or preprocess what you don't understand.
+* It helps you identify mistakes, biases, or limitations in the data.
+* It guides the direction of your data cleaning and feature engineering.
+* It gives your audience or stakeholders a "story" or overview of what the data is telling you.
