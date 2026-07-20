@@ -1,0 +1,72 @@
+AI ? 
+AI is Basically That Technology That Allows Computer or Systems that Perform
+tasks that Typically Require Human Intelligent.
+
+Ex: If We have a computers and perform those work for that 
+    they must require human Intelligence. 
+    So they need AI .
+
+How It Works !
+
+1: Is Pattern Recognition.
+
+we as a human looking on data and then we can recognize pattern in good manner 
+
+ex ;
+   1-1
+   2-4
+   3-9
+   4-16
+
+so for 5-25 
+
+because all of these numbers are the Square of These numbers 
+
+so Same Work If We want from machine then we use Pattern Recognition.
+
+Another Example Of Human Intelligence is 
+
+
+2: Speech Recognition:
+
+
+	As Humans understand their ideas, their meanings and their emotions form that words emotions so same thing if we want from machines 
+then we will use AI .
+ex ,SIRI , ALEXA Like Chatgpt and Gemni so These tools understand with the 
+help of speech recognition.
+
+
+
+3: Image Analyze.
+	Like Automate Challan 
+
+so for all these tasks we perfom AI .
+
+So We Understand The AI . Now Let's Understand The it's Branch Which is Machine Learninng.
+
+
+ML ? Are those Algoritham Which Learn From Data Rather than Programing .
+So in Machine Learing Data Is Very Much Important .
+
+So Since ML is the SubField of AI So we Can say that All the ML is AI,
+But All AI is not ML. 
+Like Examples.
+Rule based Systems. in this we use AI but not ML .
+Robotics. in this same we do Rule based programing but we don't to ML.
+A* Algoritham which is used in graphs , which is part of AI but not ML.
+Fuzzy Logic.
+
+But in Google map , Uber , Amazon
+Majority of that ai uses machine learning .
+
+And Machine Learning has most important sub domain which is Deep Learining.
+DL is The That Domain Of ML where we work on Neural network , and that neural network are inspired from human Brains inside human brains there are neurons, and these concepts are inspired from them .
+
+
+Generative AI : And Same Dl is Sub Domain or one Application  which is Generative AI , in Generative AI we work on Such Technologies or such systems which generate text , new Videos , new images ,means whatever we worked on ai was not generate any new thing now in this we deal with such AI , Such Technology which generate new Content 
+
+
+
+
+
+ 
