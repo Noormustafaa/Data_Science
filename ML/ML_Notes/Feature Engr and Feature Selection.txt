@@ -1,0 +1,61 @@
+Here is the text transcribed from the image:
+
+-> Feature Engineering
+
+Why do we need it?
+
+Because ML models don’t know domain logic — we have to give them the right signals.
+
+
+Common Feature Engineering Techniques in ML:
+Mathematical Combinations
+
+Target-Based Flags
+
+Binning (when it helps)
+
+Time-Based Features (if time exists)
+
+
+ Definitions & Examples
+
+1. Mathematical Combinations
+Mathematical combinations involve applying arithmetic operations (such as addition, subtraction, multiplication, or division) to two or more existing features to create a new, more informative single feature. This helps capture complex interactions between variables that the algorithm might miss on its own. For instance, in real estate modeling, if you have separate columns for total price and square footage, dividing price by square footage creates a new "Price Per Square Foot" feature, giving the model a direct metric of cost efficiency.
+
+2. Target-Based Flags
+Target-based flags (or binary indicators) are newly created boolean signals (0 or 1) that highlight whether a specific record meets a key condition strongly associated with the target variable. These flags make crucial threshold boundaries immediately clear to the model. For example, in credit risk modeling, rather than letting a model struggle to learn the risk threshold for low bank balances, you can create a binary feature called `Is_Account_Overdrawn` that outputs a `1` if the balance falls below $0 and a `0` otherwise.
+
+3. Binning (when it helps)
+Binning (also known as discretization) is the process of grouping continuous numerical values into distinct categorical buckets or ranges. This helps reduce noise, handles minor fluctuations, and models non-linear relationships more effectively. For instance, as suggested by the handwritten note in the image, instead of feeding raw ages like 10, 12, 17, 20, or 30 into a model, you can group them into discrete age brackets such as "Child" (10–12), "Teen" (13–19), and "Adult" (20–30).
+
+4. Time-Based Features (if time exists)
+Time-based features involve extracting meaningful components, patterns, or relative intervals from raw timestamp or date data. Raw dates (e.g., `2026-07-21`) are difficult for mathematical models to interpret, so breaking them down helps capture temporal trends and seasonal patterns. For example, from a transaction timestamp, you can extract features like `Day_of_Week`, `Month`, or a binary indicator `Is_Weekend`, allowing a retail forecasting model to easily learn that sales spike on Saturdays compared to Tuesdays.
+
+
+
+Feature Selection -->
+
+
+Selecting the most useful features and removing the rest.
+
+ Why is it important?
+
+Reduces noise and overfitting**
+Speeds up training**
+Improves model accuracy**
+Makes model interpretation easier**
+
+
+Methods in Feature Selection 
+
+1. Filter Methods (Pure Statistics)
+
+* **Correlation Matrix -> Remove highly correlated features**
+* **Chi-square test (categorical vs categorical)**
+* **ANOVA F-test (numerical vs categorical target)*
+
+
+
+
+
+
