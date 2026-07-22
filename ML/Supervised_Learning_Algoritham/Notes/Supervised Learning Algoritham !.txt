@@ -1,0 +1,37 @@
+Supervised Learning Algoritham ! 
+Supervised learning is a type of machine learning where an algorithm learns to make predictions or decisions using labeled data, much like a student learning from a teacher. In this process, you feed the algorithm input data along with the correct target answers (the "labels"). The model analyzes these examples to uncover patterns and relationships between the inputs and outputs. Once trained on enough examples, the algorithm can take brand new, unseen data and accurately predict the correct outcome based on what it learned.
+
+A great real-world example is teaching a computer to spot spam emails. By showing it thousands of emails already marked as either "spam" or "not spam," the algorithm learns which words, senders, or formatting styles usually indicate junk mail. Once it grasps those rules, it can automatically sort incoming emails in your inbox with high accuracy.
+
+
+Regression Algoritham ! Whenever you have continues variable Like salary 10k , 20k ,15k 16k 
+so in this kind of data whenever you have then we will use the Regression algoritham .
+
+Classification Algoritham ! Whenever you have data and you want to give output in the form of yes or no ,0,1
+                             in binary form .
+So This Lecture Primary focus on Supervised Learining Algoritham and it's Specially Regression Algoritham !
+
+Regression Algoritham When we predict continous values .
+
+
+Defination !
+Regression is a way to predict a number .
+it helps us find out how one thing changes when something else changes.
+
+
+## What is regression ?
+
+Imagine you’re running a lemonade stand. You’ve been keeping track of:
+
+* How many glasses you sell each day
+* And what the temperature was on that day
+
+After a while, you notice:
+**“The hotter the day, the more lemonade I sell.”**
+
+Regression is the math that helps you figure out **exactly how much more** lemonade you’ll sell as the temperature goes up.
+
+--> Regression  is About Finding  patterns in numbers so we can  make smart predictions .
+
+
+So First Thing in Regression is Linear Regression !
