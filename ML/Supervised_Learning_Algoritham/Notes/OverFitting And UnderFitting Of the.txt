@@ -1,0 +1,15 @@
+OverFitting And UnderFitting Of the Model !
+
+Overfitting !
+
+Model Work well on Training .(Low bias)
+but doesn't work well on Testing (High Variance)
+
+
+Underfitting !
+
+model not work well on both while training and testing ! here high variance and high bias occur !
+
+
+so whenever we will face these both cases then the solution is Ridge and Lasso Regression !
+
