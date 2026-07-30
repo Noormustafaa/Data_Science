@@ -1,0 +1,53 @@
+What is AI ?
+
+Artificial Intelligence !
+
+Intelligence Exhibited by machines .
+
+Intelligence -> Human Natural Intelligence(NI) And Intelligence totally based on thinking and reasoning .
+Intelligence involve ->
+1.Reasoning
+2.Learining 
+3.Problem Solving 
+4.Perception 
+
+machines-> Computer Systems 
+
+Fields of AI ! 
+AI
+ML
+Dl
+NLP
+
+Types Of AI !
+1_Purely Reactive 
+ i. No memories , No data or past experience 
+ ii. focus on current Scenarios 
+ ex ! Google's AlphaGo
+
+2_Limited Memory 
+ i. can store past experience or data for short time/limited period 
+    eg ! Self Driving cars 
+
+3_Theory of Mind 
+ i. Understand human emotions and Beliefs 
+ ii. Able To interact Socially like us . 
+ iii.Yet to built 
+ eg.Sofia
+
+ 4_Self-Aware
+ i.Future Of AI(Super Intelligence)
+ ii. own sentiment and Conscious .
+ iii. Self Aware Machines >=humans (like Chitti Robot)
+ iv. Hypothetical concept 
+
+
+ Future Of AI!
+
+Education 
+ex: Open Ai , Chatgpt
+
+Healthcare
+manufacturing
+entertainment
+Defense  
