@@ -1,0 +1,36 @@
+AI Agents? 
+
+1. Def - Agent Mean Someone Who Does Work for you !.
+
+Think Of it like a helper or a representative .
+
+Real Life example !
+Real State agent -They found houses for you . you tell them your budget
+, they do the searching and calling !
+
+So an agent Doesn't just give you info . An agent takes Action for you !
+
+What is an AI Agent !
+AI Agent = A smart helper That uses AI to think + take Actions for You
+automatically.
+
+It's not just Chatgpt answering Questions .
+ An AI Agent Can Plan , decide , and Do things Without you Guiding Every step.
+ex
+1: Customer support AI Agent !
+  You: "My Order didn't Arrive"
+ AI Agent : Check Your Order, sees it's Delayed , issues refund , sends you tracking link , All by itself.
+
+2: Personal AI Agent.
+  You "plan my week and Book gym slots"
+  AI Agent: checks Your calendar , finds free time , books gym , sets Reminders order protein.
+
+Types of Agents ! 
+Simplix Reflix Agents .
+Model Based Agents 
+Goal Based Agents 
+Utility based Agents 
+Learining Agent .
+
+
+Enviroment ??
