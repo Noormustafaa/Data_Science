@@ -1,0 +1,12 @@
+Fuzzy Logic !
+
+Father Of FL is Lotfi Zadeh . 
+
+Fuzzy Logic is a Type of logic That Deals With degree Of Truth Instead of Just True or False .
+
+Instead of only "0 or 1" , "Yes or No " , "Hot or cold ",
+
+It allows Values like  " a Little vit True " , "Mostly Hot " , "Slightly Cold"
+
+Key Points : Normal Logic : Black And White Either on or off
+             Fuzzy Logic: Shades Of Grey , Can be 20% ON, 50% ON, 80% ON.
