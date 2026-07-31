@@ -1,0 +1,66 @@
+Git ! 
+Version Control System is a Tool that helps to track changes in code. 
+Git is a Version control, it is 
+Popular 
+free and Open Source 
+Fast and Scalable .
+
+Note : We use Git Primary for Two Purposes ! 
+1:To Track The History 
+2:To Collaborate 
+
+
+GitHub :
+Website  that allows  Developers to store  and manage  their code using 
+Git . 
+Where Folders are Known As (Repository) in term of Git.
+
+So Before Learning the git We have to create an account on GitHub ! 
+
+GitHub Account--
+-->Create A New repository : First_Demo 
+--> Make Our First Commit 
+
+--Note ! Readme Is The Special Type Of File inside it we write Detail
+of Our Project .
+ and "md" word means "Mark Down"
+
+Commit : When  you finalize changing then you have to use / Click on commit 
+
+Add: First We have to add that then we will click on commit . add means it 
+is ready to commit ! 
+Note In Readme.md we have to use HTML . Like for making it new line etc.
+<br>.
+
+
+
+So GitHub is on website but Git is on our system mean we have to use in 
+out own laptop(Computer .
+
+Setting up Git :
+
+Visual Studio Code 
+Windows (Git Bash)
+Mac (Terminal)  But If You are using Mac system 
+
+So for Verification we have to Write ! 
+
+	git --version
+
+
+--So after Installation Process Next Step is 
+
+Configuring Git 
+
+git config --global user.name "YourGithubAccountName"
+git config --global user.email "YourGithubAccountCreationEmail"
+git config --list 
+
+Note ! Same Terminal will be easily work over the Visual Studio terminal . it means Git is also accessible from visual Studio code Terminal .
+
+
+
+
+
+ 
+
