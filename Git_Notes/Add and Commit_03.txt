@@ -1,0 +1,15 @@
+Add and Commit 
+
+Add - adds new or changed files in your  working directory to the git Staging area.
+	 
+	git add file_name
+or If You have made so many changes then just write 
+    
+          git add . 
+
+it will add all files at once 
+
+
+Commit - it is the Record of change 
+ 
+	git commit -m "Write any message reliable to content"
