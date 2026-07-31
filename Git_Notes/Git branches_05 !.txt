@@ -1,0 +1,20 @@
+Git branches !
+Git Branches means if we have a one product and there are so many developers
+work on it so for every separate work there will be a separate branch. 
+and in last branch we have to merge all those branches known as merge branch 
+ 
+So every Developer make a seprate copy and they start work independently and 
+in last the main copy the original copy they all merge with that .
+
+So There Are So many commands of Branches .Like
+
+1. git branch  (to check branch ) to check currently which branch we are ?
+ it will show main 
+
+2. git branch -m main (to rename branch) means to change the branch name .
+
+3. git checkout <-branch name -> (to navigate) if we want to move from one branch to another branch 
+
+4. git checkout -b <-new branch name -> (to create a new branch )
+
+5-> git branch -d <-branch name -> (to delete branch)
