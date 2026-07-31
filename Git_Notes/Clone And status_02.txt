@@ -1,0 +1,53 @@
+So Let's Learn Basic Commands of Git Which is !
+
+Clone And Status 
+
+-->Clone -Cloning a repository on your local machine 
+	when we say remote then it means (GitHub)
+        When we say Local  Then it means (PC)
+Clone mean Duplicate . 
+Clone means if we want to copy of our GitHub repo to our system then we will use the clone command .
+
+Command:
+git clone "Paste Project Link"
+
+Steps : Go to Repo And then Click on code icon and click on HTTPS then copy tha link 
+
+Step1: Open a Folder in VS Code Write its name Demo and then open terminal  of VS Code and then write clone Command ! 
+     
+Step2: After Cloning You we see inside demo folder you will have that Project which we have created .
+Step3: then write cd(Change Directory) which is basic terminal command cd ProjectName . 
+Step4: Write ls this command will show you all file which are exist in that folder.
+ 
+Note Inside the Folder there will be create two types of File No1: is Normal file which we can easily see like Readme file 
+  And No2 is our Hidden File Which we don't see normally we can just see those file using terminal. So For That 
+	We Have To Write Command ls -a
+
+Note .git exist in all files and folders  :
+
+-->Status command .
+It Displays The State Of the Code 
+ 	Just Write Command 
+	git status 
+
+it will show on branch main .
+
+Note : If You will make change (Modify) Your File Then you have to add and commit as well , these are all things will show status command .
+Note And when you create index.html file then you write git status then it will show untracked file . means those files which Git don't know.
+
+
+So whenever we use git status Generally we face 4 types of status 
+
+1: Untracked 
+   new files that git Doesn't yet Track 
+2: modified
+    means you have make changing 
+3: unmodified 
+   means you have no make changing  
+4: staged
+    file is ready to be committed   
+
+
+
+
+
