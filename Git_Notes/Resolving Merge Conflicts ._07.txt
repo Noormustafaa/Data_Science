@@ -1,0 +1,50 @@
+Resolving Merge Conflicts .
+
+An Event that takes place when git is unable to automatically resolve difference in code between two commits .
+
+in index.html file lets add a new feature .
+
+<p> this is a new feature (button) </p>
+
+now save it .
+ git add .
+git commit -m "add button " 
+
+now check.
+
+git checkout feature1 
+
+now in same place in index.html now add dropdown
+
+<p> this is a new Feature (dropdown)</p>  
+
+now add this change as well in same branch feature1
+
+git add .
+git commit =m "add Dropdown " 
+
+now write git diff main .
+
+so the thing is that changes are happen in same place in branches .
+
+
+so for merging we have learnt two ways 
+
+1. Create a pull Request (PR)
+
+2. git merge   
+
+so let's use second way 
+
+write git merge main 
+enter 
+
+so in vs code it will show error and it terminal it will shows you conflict known as merge conflict . 
+
+means when in one file branch1 make changes and on same place when other branch make changes so git don't understand which commit i have to finalize. so git is not able to resolve differences in code .
+
+so in this case we have to tell manually that which branch change we want .
+
+so that is known as resolving merge conflicts . 
+
+so we just have to remove one line from that in vs code which we don't want . and then add and commit 
