@@ -1,0 +1,20 @@
+Merging code 
+
+way 1 
+
+git diff <-branch name ->   (to compare commits, files and more )
+
+git merge <- branch name -> ( to merge 2 branches ) 
+
+
+way 2 
+
+Create a PR 
+
+pull Request 
+
+it lets you tell others about changes you've pushed to a branch in a repository on GitHub .
+
+Note Pull Command ? 
+git pull origin main 
+used to fetch and download content from a remote repo and immediately update the local repo to match that content 
