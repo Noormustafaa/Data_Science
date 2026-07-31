@@ -1,0 +1,50 @@
+Push Command : 
+
+Push - upload local repo Content to remote repo 
+  
+	git push origin main 
+
+init Command :
+init - is used to create a new git repo 
+
+git init 
+
+Step 1 create a new folder write mkdir localrepo 
+then write git init 
+and write ls -a then it will show you the .git file 
+
+now inside it that folder Create a new File index.html 
+and write <P> this is new repo </p>
+
+Then Write git status 
+it will show you untracked file 
+git add .     using this command we have added them 
+
+commit -m "Initial Files added " 
+
+Now write git status 
+
+so these all changes we have made in local system now we want to upload 
+all these changes on GitHub 
+
+Create a new Repo on GitHub named Local repo and don't write readme.md file 
+
+
+Step1: Write git remote add origin <link of that repo here>
+Click on enter 
+
+Step2: git remote -v (to verify remote )
+step3: git branch (to check branch ) it show currenty in which branch we are ?
+it will show master branch 
+and then we have to change into main 
+
+so we can change 
+
+git branch -M main 
+
+git push -u origin main 
+
+
+
+
+
