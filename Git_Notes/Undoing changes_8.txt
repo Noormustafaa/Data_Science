@@ -1,0 +1,41 @@
+Undoing changes 
+
+-- some times we make changes by mistakes to whom we don't want to add then in this case how can we undo that changes .
+
+So for Undo !
+
+case1:Those changes which are add but not commit 
+
+	Just write 
+
+	git reset <file name >  For Particular file 
+
+	 For reset multiple files write 
+
+	 git reset 
+
+
+case 2: Commited changes (for one commit )
+
+		git reset HEAD~1  
+
+	write
+ 
+        git log
+
+for checking all comments 
+
+
+case3: commited changes (for many commits) For multiple commits undo 
+
+	write 
+	git reset <hash address> for every branch there is unique hash 
+
+
+and remove prevous changes as well then write 
+
+	git reset --hard <hash code paste here>
+	
+
+
+
