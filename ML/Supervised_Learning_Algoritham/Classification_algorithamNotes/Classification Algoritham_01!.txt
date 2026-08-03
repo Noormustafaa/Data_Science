@@ -1,0 +1,27 @@
+Classification Algoritham !
+
+In Supervised Learning We have already learnt Linear Regr or Reg Algorithrams  .
+
+And other Algoritham in Supervised Learning is Classification Algoritham .
+
+First We will Learn what is Classification algorithm !
+
+What Is Classification Algoritham ? 
+it is a type of machine learning algoritham used to predict a Category or 
+class label for a given input .
+
+Classification is the process of teaching a machine to a answer questions like: "Is this a cat or a dog ? will this customer survive or not ? 
+
+means we have to do binary classification: 
+
+ex : DAta is 
+	Weight    obese(fat or thin)--Output variable 
+         26       No 
+         39       No
+         48       No
+         96       yes
+         128      yes
+         82       yes
+
+So whenever you have to predict yes or no then we will use the classification Algorithm ,so by using this data we will create a model 
+which predict obese , when we will assign it weight. 
