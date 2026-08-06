@@ -1,0 +1,126 @@
+Default Fallback intent 
+Default Welcome  intent 
+
+So When You Create A new Agent You will Always see these two intents 
+Default Fallback intent 
+Default Welcome  intent.  
+
+So let's Understand 
+
+Step1: 
+
+So when You go to the try it now and write HI . and hit Enter 
+Then you will se as a Response "How Can i assist you?"
+
+So Even Though we did't do anything but it still recognize my Hi and respond it . 
+So the intent was Default welcome intent . as it is showin in bottom 
+
+And If You will write hello . you will get response . 
+"Good day ! what can i do for you Today !"
+
+
+So Where This Responses Are Coming ? 
+So For that you need to see just Click on Diagnostic INFO . 
+
+{
+  "responseId": "afabe68a-8c33-4a94-aa48-ba74a45ee347-ffa5a0e0",
+  "queryResult": {
+    "queryText": "hi",
+    "action": "input.welcome",
+    "parameters": {},
+    "allRequiredParamsPresent": true,
+    "fulfillmentText": "Greetings! How can I assist?",
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            "Greetings! How can I assist?"
+          ]
+       }
+      }
+    ],
+    "intent": {
+      "name": "projects/pizzabot-jxd9/agent/intents/40f78193-c19b-478d-98f8-4481d1f8a409",
+      "displayName": "Default Welcome Intent"
+    },
+    "intentDetectionConfidence": 1,
+    "languageCode": "en"
+  }
+}
+
+
+
+--Now Default Fallback Intent : Something Which is doesn't Recognize Then it will go this intent Fallback Intent .
+	Write Pune . 
+
+When you write this and hit Enter It will give you answer "What was that?"or it will show you i didnot get that.
+
+And In bottom it will show you defaultfallback intent . 
+
+
+
+
+--So When You click on default welcome intent . you will be able to understand how these things are working .
+
+When you click you well se some training phases . means we need to train this machine learning model . so you can see there something similar to this if come then it will recogonize !  so you write something which is not similar to that , it will recognize because we are using ML , it actually train it self based on samples ,
+
+But The Ideal Situation is We should give at least 10 sentence for train ML model .
+
+
+When you scroll down you will be able to see responses as well as a return . 
+
+Let's add Something .
+
+Hey My Name Is Pizzabot i can help you with your pizza order 
+
+Hit Enter 
+
+And Remove All these Responses .
+
+
+So Now We Have Only one Response .
+
+So once You do it then Save it . 
+
+So once you save it, it will automatically train the model in the background .
+
+
+So Now if you will Write Hi then you will be able to see it automatically give you that response .
+
+
+So let's Create Another Intent If The User Want's So Order Pizza ! 
+
+Step1: click on Intent+
+Step2: Assign name as OrderPizza
+Step3: In Training phases  as we already discussed we have to give some samples Examples to machine to understand what                  	user want to say
+	Just click on Add Training phases
+
+
+I want pizza
+
+I want pizza
+
+Pizza please
+
+Can you take my order for Pizza
+
+Can I get a Pizza please
+
+I want to order a pizza
+
+Order a Pizza
+
+
+Step4: in Response Write 
+Alright i can Help you with your pizza order 
+
+
+--So Now when you Write Pizzer Order . 
+then it show you that Response  . 
+
+and it bottom it will show you intent Order Pizza  . which intent we had Created !
+
+
+
+
+ 
