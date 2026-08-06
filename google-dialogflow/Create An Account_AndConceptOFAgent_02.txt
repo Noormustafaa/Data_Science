@@ -1,0 +1,30 @@
+Create An Account_02
+
+Step1: Write console.Dialogflow.com 
+Step2: You will see a Dashboard where there is an option Name Agent.
+
+	What is An Agent ?Whenever We listen Agent ! we always think of Human !
+In everyday life, the word Agent usually makes us think of a human—like a Customer Support Agent, a Real Estate Agent, or a Secret Agent.
+However, in Software & Artificial Intelligence, an Agent refers to a virtual worker or automated program that acts on your behalf.
+
+What Does "Agent" Mean in Dialogflow / AI?
+
+In Google Dialogflow, your entire chatbot or voicebot is officially called an Agent.
+
+Think of a Dialogflow Agent as a Digital Call-Center Employee:
+
+It listens to incoming customer messages.
+It understands what the customer wants (Intents).
+It talks back or executes a task (Fulfillment).
+
+Why Is It Called an "Agent" Instead of Just a "Bot"?
+
+1:Program / Script Simple, static code that only follows strict IF/ELSE rules.	An automated vending machine.
+
+2:Bot	A basic interface that responds to pre-written menu buttons.	An interactive automated phone tree (press 1, press 2).
+
+Agent (AI)	A system given agency—the ability to perceive input, reason, make decisions, and complete a multi-step task autonomously.	A trained human receptionist handling client requests.
+
+SO:
+
+When you build a Dialogflow Agent, you are creating a digital virtual assistant that acts on behalf of your company or application. It greets customers, books appointments, answers FAQs, and calls external APIs without requiring a human operator to click a button each time.
