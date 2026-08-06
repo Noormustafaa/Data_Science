@@ -25,6 +25,16 @@ Why Is It Called an "Agent" Instead of Just a "Bot"?
 
 Agent (AI)	A system given agency—the ability to perceive input, reason, make decisions, and complete a multi-step task autonomously.	A trained human receptionist handling client requests.
 
+
+
 SO:
 
 When you build a Dialogflow Agent, you are creating a digital virtual assistant that acts on behalf of your company or application. It greets customers, books appointments, answers FAQs, and calls external APIs without requiring a human operator to click a button each time.
+
+Step3: For Creating An agent : You need to Click on Create Agent Then
+ assign Name PizzaBot
+Step3: Select a Language as en 
+Step4: Select a TimeZone 
+step5: Then click on Create 
+
+
