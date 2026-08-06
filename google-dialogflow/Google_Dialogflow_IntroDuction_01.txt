@@ -1,5 +1,7 @@
 Google Dialogflow:
 
+Google Dialogflow is an AI-powered software platform (PaaS) on Google Cloud Platform (GCP) that enables developers and companies to build smart conversational interfaces (chatbots and voice bots).
+
 Think of Google Dialogflow as a tool that lets you build intelligent chatbots and voice bots—without having to code the complex language-understanding part from scratch.
 
 When you type a message to a bot, humans use slang, spelling mistakes, or different sentence structures. Dialogflow sits in the middle: it listens to what a user says, understands what they actually mean, and hands over that clean information so your system can take action.
