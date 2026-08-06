@@ -1,0 +1,108 @@
+Intent : Intent Is Nothing but What is the Intension Behind What you are Trying to achieve .
+
+An Intent is literally the intention or goal behind a user's statement.
+
+In Dialogflow ES, an Intent is the fundamental building block. Whenever a user types or speaks a message, Dialogflow’s job is to look at that message and ask one core question: "What is this person trying to achieve?
+
+The Anatomy of an Intent in Dialogflow ES
+When you create an Intent inside Dialogflow ES, you configure three main things:
+
+[ User Input ]  ──►  1. Training Phrases  ──►  2. Action & Parameters  ──►  3. Responses
+
+1. Training Phrases (What the user might say)
+These are example sentences you give to Dialogflow so the AI can learn. You don't need to list every single variation—just 10 to 15 different examples are enough for Google's Machine Learning to pick up the pattern.
+
+"I want to book a room"
+
+"Reserve a table for tonight"
+
+"Can I get a slot for 2 people?"
+
+
+2. Action & Parameters (The extracted details)
+This is where Dialogflow extracts specific entities (like dates, numbers, or locations) attached to that intention so your backend code can process them.
+
+3. Responses (What the bot says back)
+The answer or reaction your bot gives once it recognizes the user's intent.
+
+--Entity--
+
+If Intent is the overall goal or action, an Entity is the specific detail inside that goal.
+
+Think of it this way:
+
+Intent: What does the user want to do? (The Verb / Action)
+
+Entity: What are the specifics required to complete that action? (The Nouns / Variables)
+
+1. Real-World Analogy: Ordering Coffee
+If a customer says:
+
+"I want to order a Large Iced Vanilla Latte for 2:30 PM."
+
+Intent: order_coffee (The goal)
+
+Entities (Parameters):
+
+@size: Large
+
+@coffee_type: Iced Vanilla Latte
+
+@time: 2:30 PM
+
+Without Entities, the bot only knows you want coffee, but it doesn't know what size, what type, or when!
+
+2. Types of Entities in Dialogflow ES
+Dialogflow splits entities into two main categories:
+
+
+A. System Entities (Pre-built by Google)
+Google already provides tons of built-in entities out of the box. You don't need to define what a date, time, or country is—Google's AI model already knows them.
+
+@sys.date: tomorrow, next Monday, Aug 12
+
+@sys.number: 5, ten, 100
+
+@sys.geo-city: London, Karachi, New York
+
+@sys.email: user@example.com
+
+B. Custom / Developer Entities (Created by You)
+These are specific variables unique to your business or domain.
+
+Example: If you build a Pizza Bot, @sys.date won't know your menu items! So you create a custom entity named @pizza_topping:
+
+Entity Name: @pizza_topping
+
+Values & Synonyms:
+
+Pepperoni (Synonyms: spicy sausage, pep)
+
+Mushrooms (Synonyms: shrooms, fungi)
+
+Extra Cheese (Synonyms: double cheese)
+
+
+3. How Entities Map to Code (Data Science View)
+As a Data Scientist, think of Entities as key-value pairs or dictionary objects extracted from unstructured natural text and turned into structured JSON data:
+
+
+{
+  "intent": "book_flight",
+  "confidence": 0.98,
+  "parameters": {
+    "destination": "Dubai",
+    "departure_date": "2026-08-10",
+    "passengers": 2
+  }
+}
+
+
+
+Once Dialogflow extracts this clean JSON dictionary, your Python script can directly pass these variables into a SQL query, ML model, or API call.
+
+
+
+
+
+
