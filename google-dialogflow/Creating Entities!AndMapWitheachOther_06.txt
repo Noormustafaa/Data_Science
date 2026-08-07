@@ -1,0 +1,68 @@
+Creating Entities!_06
+
+Step1: Click on Entities And Assign the name 
+	PizzaSize
+
+Step2: Below Define The size Of It !
+
+
+
+| Column 1 | Column 2 |
+| --- | --- |
+| small | small, S |
+| medium | medium, M |
+| large | large, L |
+| extra large | extra large, XL |
+
+And Then Save the Entity!
+
+Step3: Click On + beside the Entities for creating a new Entity :
+	Assign a Name PizzaToppings
+
+Step4: Write the following Data 
+
+
+
+
+| Column 1 | Column 2 | Column 3 |
+| --- | --- | --- |
+| Cheee | Cheee |  |
+| Onion | Onion |  |
+| Sausage | Sausage |  |
+| Chicken | Chicken |  |
+| Mushroom | Mushroom |  |
+| Pineapple | Pineapple |  |
+| Black Olives | Black Olives | Enter synonym |
+
+
+
+Step5: Now We have to merge these Entities !
+
+Click on Intent 
+and click on order Entitie!
+And Write there I want a Large Pizza .
+
+Step6: There is Something called Large Which is nothing but the Size here 	And we have already create an entity 
+so Just 
+
+click on large then there will be another dialogue box will open and write there @pizzasize. Means we have map this large to Pizza Size .
+
+Step6: If You see below there is a Action Parameters Pizzasize is mapped with @pizzaSize and select that checkbox .
+
+And click on Define promt . and write 
+
+What size of pizza shall i order For You:
+Can you please Specify Pizza size . 
+
+Note Dialogue box will pick any of them randomly  . click on close 
+
+Click on save(train)it .
+
+Step7: Write i want pizza 
+ it will asko you size of pizza 
+and then Write small . 
+it will give you answer that i will help you with you pizza order .
+
+
+  
+
