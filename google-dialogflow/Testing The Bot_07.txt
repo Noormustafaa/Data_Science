@@ -1,0 +1,24 @@
+Testing The Bot_07 
+
+In This Lecture We will learn How bots Look ! 
+
+Step1: Click On Integrations!
+
+Step2: Click on webDemo
+
+Step3: Click on Link 
+
+	You will be able to see chatbot 
+
+Step6: Write hi .
+
+	It will give you response !
+	my name is Pizza bot ! iam here to help you with your pizza Order
+
+Step7: i want to order pzza 
+
+step 8: small 
+
+Step9: chicken And onion 
+
+step10: Regular  
