@@ -1,0 +1,128 @@
+input and Output Context _09
+
+
+ 1. Output Context (Creating/Saving Memory)
+
+An **Output Context** is used to **store information and save the state** of the conversation for the next step.
+
+In Simple Words:** When an Intent is triggered, it turns on a "tag" (or memory flag) for future turns.
+Example:**
+User says:** *"My name is Ali."*
+Bot processes this** and sets an **Output Context**: `user_name_saved`.
+Result:** The bot now remembers the user's name in its active memory.
+
+
+
+---
+
+ 2. Input Context (Checking Requirements/Conditions)
+
+An Input Context** acts as a **prerequisite or condition** to check if a specific previous conversation has already taken place.
+
+In Simple Words:** It sets a rule. An Intent will **only** trigger if the required context (tag) is currently active.
+Example:**
+User asks:** *"What is my name?"*
+Bot's Intent configuration:** Requires **Input Context**: `user_name_saved`.
+If context is active:** The bot responds: *"Your name is Ali."*
+If context is missing:** The Intent will not trigger because the required prior context wasn't set.
+
+
+
+---
+
+## How They Work Together (Step-by-Step Example)
+
+Here is a practical flow of how both work in a conversation:
+
+1. Step 1 (First Intent):**
+User:** *"I want to buy an iPhone."*
+Output Context:** `buying_iphone` *(The bot turns on this tag).*
+
+
+2.Step 2 (Second Intent):**
+Input Context required:** `buying_iphone` *(This intent says: "I will only activate if the user is currently talking about buying an iPhone").*
+User:** *"How much does it cost?"*
+Bot:** Thanks to the active **Input Context**, it understands that *"it"* refers to the **iPhone** and responds with its price.
+
+
+
+---
+
+### Quick Takeaway
+
+Output Context:** Creates and saves the memory after an Intent runs.
+Input Context:** Checks for existing memory before allowing an Intent to run.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Output Context (Yaad Banana / Memory Save Karna)
+Output Context ka kaam hota hai baat ko yaad rakhna aur aglay step ke liye save karna.
+
+Simple Matlab: Jab koi Intent trigger hoti hai, toh yeh ek "tag" (ya memory) ON kar deta hai.
+
+Example:
+
+User bolta hai: "Mera naam Ali hai."
+
+Bot samajhta hai aur Output Context set kar deta hai: user_name_saved.
+
+Iska matlab ab bot ne dimag me Ali ka naam yaad rakh liya hai.
+
+
+
+2. Input Context (Shart / Requirement Check Karna)
+Input Context ka kaam hota hai yeh dekhna ke kya pichli baat ho chuki hai ya nahi?
+
+Simple Matlab: Yeh ek shart (condition) lagata hai. Ek Intent sirf tabhi kaam kare gi jab peeche se required context (tag) active hoga.
+
+Example:
+
+User bolta hai: "Mera naam kya hai?"
+
+Bot ki Intent me Input Context laga hua hai: user_name_saved.
+
+Agar context active hai, toh bot kahe ga: "Aapka naam Ali hai."
+
+Agar user ne pehle naam nahi bataya hota (context nahi hota), toh yeh intent trigger hi nahi hoti.
+
+
+
+Dono Saath Kaise Kaam Karte Hain? (Aasan Misaal)
+Is flow ko dekhein:
+
+Step 1 (First Intent):
+
+User: "Mujhe iPhone khareedna hai."
+
+Output Context: buying_iphone (Bot ne tag ON kar diya).
+
+Step 2 (Second Intent):
+
+Input Context: buying_iphone (Intent bolti hai: Main tabhi chalungi jab user iPhone ki baat kar raha ho).
+
+User: "Iska price kya hai?"
+
+Bot: Input Context ki waja se samajh gaya ke "Iska" ka matlab iPhone hai aur price bata dega.
+
+
+
+Output Context: Baat khatam hone par Memory create/save karta hai.
+
+Input Context: Aglay sawal par Memory check karta hai ke pichli baat hui thi ya nahi.
