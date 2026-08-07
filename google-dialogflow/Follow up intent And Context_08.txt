@@ -1,0 +1,84 @@
+Follow up intent And Context !
+
+
+
+ 1. Context
+
+Context** acts as the **memory system** of your chatbot. Just like humans rely on previous conversation history to understand current statements, Dialogflow uses Contexts to pass state and variables from one turn of the conversation to the next.
+
+How it Works:
+Output Context: When an intent is matched, it can trigger an *Output Context* to save current state or data.
+Input Context: Subsequent intents use an *Input Context* to ensure they only get matched if that specific context is active.
+
+
+Example:
+User:** *"I want to order a pepperoni pizza."*
+(Intent matches and sets an Output Context: `pizza-ordering`)*
+User:** *"How much does it cost?"*
+(Because `pizza-ordering` is active as an Input Context, the bot knows "it" refers to the pepperoni pizza).*
+
+
+
+---
+
+ 2. Follow-Up Intent
+
+A Follow-Up Intent** is a specialized child intent linked directly to a parent intent. It represents predictable next steps or responses from the user based on what the bot just asked.
+
+How it Works:
+When you create a Follow-Up Intent (e.g., `yes`, `no`, `cancel`, `custom`), Dialogflow **automatically creates and links underlying Contexts** between the parent intent and the child intent for you.
+Example:
+Parent Intent : "Would you like to confirm your order?"*
+Follow-Up Intent (Yes):** User says *"Yes"* -->Bot processes and confirms the order.
+Follow-Up Intent (No):** User says *"No"* --> Bot cancels the order.
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+1. Context (Siyaq-o-Sabaq / Hafiza)
+Context chatbot ka memory system (hafiza) hota hai. Jab aap kisi se baat karte hain, toh pichli baat yaad rakhna zaroori hota hai, bilkul waise hi Dialogflow me Context kaam karta hai.
+
+Kaam kaise karta hai?
+Jab koi user pehla sawal poochta hai, toh Dialogflow ek Output Context set kar deta hai. Agle sawal me bot us context ko Input Context ke taur par parhta hai taake use samajh aaye ke baat kis baare me ho rahi hai.
+
+Example:
+
+User: "Mujhe pizza order karna hai." (Bot samajhta hai topic 'Pizza' hai — Context set ho gaya).
+
+User: "Iss ka price kya hai?"
+
+Bot: Context ki waja se samajh jata hai ke "Iss" se murad Pizza hai, koi aur cheez nahi.
+
+
+
+2. Follow-Up Intent (Aglay Sawal Ka Jawab)
+Follow-Up Intent aisi Intents (maqsad/sawalat) hoti hain jo kisi Parent (asal/pehle wali) Intent se judi hoti hain. Yeh bilkul ek direct aage ki baat hoti hai jo pehle wali baat ke bina adhuri hai.
+
+Kaam kaise karta hai?
+Jab Dialogflow me aap Follow-up intent banate hain (jaise yes, no, details, etc.), toh Dialogflow automatically unke peeche Contexts add kar deta hai taake bot ko pata ho yeh 'Yes' ya 'No' kis sawal ke jawab me aaya hai.
+
+
+
+
+
+
+2. Follow-Up Intent (Aglay Sawal Ka Jawab)
+Follow-Up Intent aisi Intents (maqsad/sawalat) hoti hain jo kisi Parent (asal/pehle wali) Intent se judi hoti hain. Yeh bilkul ek direct aage ki baat hoti hai jo pehle wali baat ke bina adhuri hai.
+
+Kaam kaise karta hai?
+Jab Dialogflow me aap Follow-up intent banate hain (jaise yes, no, details, etc.), toh Dialogflow automatically unke peeche Contexts add kar deta hai taake bot ko pata ho yeh 'Yes' ya 'No' kis sawal ke jawab me aaya hai.
+
+
+Example:Parent Intent: "Kya aap order confirm karna chahte hain?"Follow-Up Intent (Yes): User bolta hai "Haan" $\rightarrow$ Bot samajhta hai ke order confirm karna hai.Follow-Up Intent (No): User bolta hai "Nahi" $\rightarrow$ Bot order cancel kar deta hai.
