@@ -1,0 +1,14 @@
+Generate an openai key_03 
+
+Step1: Create an account on Openai
+
+Step2 : Search on browser  platform.openai.com  --->Sign Up
+
+step3: API Key Section
+
+step4:  Step 3: Generate new Key Create -->Create new secret key--> new popup will open and then write Name any name  "my-test-key"--->Create secret key
+
+step5: Copy key and save it on notepad 
+
+step6: paste on code 
+
