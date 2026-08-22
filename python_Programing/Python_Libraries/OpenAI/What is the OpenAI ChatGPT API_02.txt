@@ -1,0 +1,81 @@
+What is the OpenAI ChatGPT API?
+The OpenAI ChatGPT API allows you to embed ChatGPT’s intelligence into your own applications, websites, or software programs.
+
+While ChatGPT (chatgpt.com) is a pre-built web application designed for humans to interact with directly in a browser, the ChatGPT API is a programmatic connection point built for developers to send inputs and receive AI-generated outputs through code.
+
+
+2 Ways to Connect to the OpenAI API
+When building an application, you can interact with OpenAI's models through two main paths:
+
+[ Your App / Code ]
+        |
+        +---> Method 1: Official OpenAI SDK (Library) ---> [ OpenAI Servers ]
+        |
+        +---> Method 2: Direct HTTP/REST Endpoint  ---> [ OpenAI Servers ]
+
+Method 1: Using the Official OpenAI SDK (Recommended)
+OpenAI provides official software development kits (SDKs) for languages like Python and Node.js/TypeScript. These libraries handle network connections, formatting, and authentication behind the scenes.
+
+How it works: You install the official library (pip install openai or npm install openai), configure your API key, and call pre-defined methods directly in your code.
+
+Best for: Most developers building standard backend applications, as it requires less boilerplate code and includes built-in error handling.
+
+
+from openai import OpenAI
+
+# Initialize client with your key
+client = OpenAI(api_key="YOUR_OPENAI_API_KEY")
+
+# Make a call using the SDK method
+response = client.chat.completions.create(
+    model="gpt-4o-mini",
+    messages=[
+        {"role": "user", "content": "Explain APIs in one simple sentence."}
+    ]
+)
+
+print(response.choices[0].message.content)
+
+
+
+Method 2: Calling the HTTP API Endpoint Directly
+Because the API is built on standard HTTP protocol conventions, you don't necessarily have to use OpenAI's official library. You can make direct raw network calls to OpenAI's server endpoint using standard HTTP tools (like curl, fetch, axios, or Python's requests).
+
+
+API Endpoint URL: [https://api.openai.com/v1/chat/completions](https://api.openai.com/v1/chat/completions)
+
+How it works: You construct a raw POST request, pass your API key inside the HTTP Authorization Header (Bearer YOUR_API_KEY), and attach a JSON body containing your prompt.
+
+Best for: Custom environments, non-supported programming languages (like C++, Go, or Rust without SDKs), or when you want direct control over network requests.
+
+
+
+Direct HTTP Request Example (cURL):
+
+
+curl https://api.openai.com/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_OPENAI_API_KEY" \
+  -d '{
+    "model": "gpt-4o-mini",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain APIs in one simple sentence."
+      }
+    ]
+  }'
+
+
+Summary Comparison
+ 
+Feature        ||    Method 1: Official SDK                                 ||  Method 2: Direct HTTP Endpoint
+
+Setup	       ||    Requires installing OpenAI library                     ||  No extra library needed (uses native HTTP)
+
+Ease of Use    ||	High (handles formatting & typing automatically)    ||	Moderate (requires manual JSON & headers)
+
+
+Flexibility    ||	Bound to supported languages (Python/JS)	    ||  Works with any programming language
+
+Under the Hood ||	Converts your code into Method 2 HTTP calls	    ||  Sends HTTP calls directly to OpenAI
