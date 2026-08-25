@@ -1,0 +1,19 @@
+KNN_01
+
+What is KNN?
+K-Nearest Neighbors (KNN) is a simple machine learning algorithm that classifies a new data point based on how close it is to existing data points.
+
+
+Simple Real-Life ExampleImagine a new student joins your class, and you want to guess if they like Gaming or Reading:You look at the 3 closest people sitting near them (K=3).If 2 neighbors love Gaming and 1 loves Reading, the majority wins.The algorithm predicts that the new student loves Gaming.
+
+How KNN Works Step-by-StepChoose $K$: Decide how many nearest neighbors to look at (e.g., $K=3$ or $K=5$).Calculate Distance: Measure how far the new data point is from all other points (usually using straight-line distance, known as Euclidean distance).Find the Neighbors: Identify the $K$ closest data points.
+
+Note : it is used in both for classification alg and regression algorithm (continuous data)
+
+Make a Prediction:
+
+For Classification (Categories): Take a majority vote among the neighbors (e.g., Survived vs. Not Survived).
+
+For Regression (Continuous Numbers): Take the average of the neighbors' values (e.g., predicting Salary or House Price).
+
+2 Key Tips to RememberAlways use an odd number for $K$: Choosing odd numbers like 3, 5, or 7 prevents tie votes during classification.
