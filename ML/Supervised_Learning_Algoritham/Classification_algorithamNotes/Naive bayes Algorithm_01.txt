@@ -1,0 +1,33 @@
+Naive bayes Algorithm !
+
+The Naive Bayes algorithm is a supervised machine learning classification method based on Bayes' Theorem. It is primarily used to predict the category of a data point by calculating the highest probability of class membership.
+
+Note For Understanding Naive Bayes Theorem we must have a knowledge of bayes theorem !
+
+Naive Bayes is a shortcut method for making smart guesses based on clues. It calculates the probability of an outcome by combining the probabilities of individual pieces of evidence.
+
+Why "Naive"?
+It assumes every piece of evidence is completely independent of the others.
+
+Real life: "Rain" and "Dark Clouds" usually go together.
+
+Naive Bayes: It treats "Rain" and "Dark Clouds" as two completely unrelated clues that happen to occur at the same time. Even though this assumption is false in the real world, the math works surprisingly well in practice.
+
+How It Works: The Spam Filter Example
+
+Imagine sorting an email to decide if it is Spam or Not Spam.
+
+The email contains the words: "Free", "Money", and "Meeting".
+
+Look at past history: The algorithm checks thousands of past emails to learn frequencies:
+
+"Free" appears in 80% of Spam emails, but only 5% of normal emails.
+
+"Money" appears in 70% of Spam emails, but only 2% of normal emails.
+
+"Meeting" appears in 10% of Spam emails, but 60% of normal emails.
+
+
+
+Note : when We are Talkin About Prob Basically there are two types of Prob ! one is Dependent And other is independent
+
