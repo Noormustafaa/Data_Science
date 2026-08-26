@@ -1,0 +1,27 @@
+Decision Tree classification works like a flowchart or a series of Yes/No questions to make a decision. You start at the top, answer questions step-by-step based on your data, and follow the branches until you land on a final answer (a leaf node).
+
+Asaan Example: Cricket Khelna Hai Ya Nahi?
+
+Instead of calculating complex percentages like Naive Bayes, a Decision Tree makes a clear rulebook based on your past data:
+
+
+               Is it raining?
+              /              \
+         (Yes)                (No)
+         /                      \
+  Don't Play               Is humidity high?
+                           /               \
+                      (Yes)                 (No)
+                      /                       \
+               Don't Play                     Play!
+
+
+Steps:
+
+Start with the Data
+
+Choose the best feature
+
+Make branches
+
+Repeat the process for each branch
