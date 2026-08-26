@@ -1,0 +1,64 @@
+A Decision Tree is used to build another model called Random Forest. However, Random Forest is an ensemble technique where we don't build just a single Decision Tree, but multiple Decision Trees. When we create multiple trees, it forms a forest. We construct it randomly using techniques like bagging and other methods, all of which we will learn.
+
+SVM: Support Vector Machine ! 
+
+A Support Vector Machine (SVM) is a supervised machine learning algorithm primarily used for classification tasks.
+
+Definition
+SVM works by finding an optimal boundary (called a hyperplane) that separates data points of different classes with the maximum possible distance (margin). The data points closest to this decision boundary are called support vectors, as they directly define the position and orientation of the boundary.
+
+
+Hyperplane & Margins
+
+In 2D space, a hyperplane is simply a straight line dividing two categories.
+
+In 3D space, it becomes a flat 2D plane.
+
+SVM aims to maximize the margin (the gap between the hyperplane and the closest data points of any class). A larger margin leads to better generalization on unseen data.
+
+
+Linear vs. Non-Linear Separation
+
+Linear SVM: Used when data points can be clearly separated with a straight line or flat plane.
+
+Non-Linear SVM (Kernel Trick): When data cannot be linearly separated in its original space, SVM uses mathematical functions called kernels (e.g., RBF, Polynomial) to project data into a higher-dimensional space where linear separation becomes possible.
+
+Step 1 (Plotting): Each email is plotted as a point on a 2D graph.
+
+Step 2 (Finding the Line): SVM draws multiple possible lines between the red points (Spam) and green points (Not Spam).
+
+Step 3 (Selecting the Optimal Boundary): It picks the single line that maximizes the buffer distance between the nearest Spam email and the nearest Not Spam email.
+
+Step 4 (Prediction): Any new incoming email will fall on one side of this line, automatically classifying it as Spam or Not Spam
+
+
+
+
+A kernel in Support Vector Machines (SVM) is a mathematical function that takes low-dimensional input data and transforms it into a higher-dimensional space where complex, non-linearly separable data becomes linearly separable.
+
+Instead of manually calculating complex transformations for every single data point in high dimensions, a kernel computes the inner products (similarities) between points in the higher-dimensional space directly using their original coordinates. This mathematical shortcut is known as the Kernel Trick.
+
+
+Why We Need Kernels
+
+Handles Non-Linear Data: Standard linear SVM can only draw straight decision lines or flat planes. Real-world data (like image recognition, genomics, or financial patterns) is rarely linearly separable. Kernels allow SVM to create complex, curved decision boundaries
+
+
+Solves the "Curse of Dimensionality": Explicitly converting data into high-dimensional space requires immense computing power and memory. The Kernel Trick calculates high-dimensional relationships without ever having to actually transform or store the data points in that higher dimension.
+
+Versatility: By simply swapping the kernel function, you can adapt the SVM algorithm to handle different types of data distributions (e.g., text vs. images).
+
+
+Common Kernel Types
+
+Linear Kernel: Used when data is already linearly separable. Standard dot product between features.
+
+Polynomial Kernel: Converts features into polynomial combinations, useful for image processing and natural language tasks.
+
+Radial Basis Function (RBF) / Gaussian Kernel: The most widely used default kernel. Maps data into an infinite-dimensional space, capable of wrapping decision boundaries tightly around complex clusters.
+
+Sigmoid Kernel: Derived from neural network theory, functioning similarly to a two-layer perceptron.
+
+
+Simple ExampleImagine a 2D plot with red dots arranged in a tight inner circle surrounded by a outer ring of blue dots.Without a Kernel (Linear SVM): You cannot draw a single straight line in 2D space to separate the inner circle of red dots from the outer ring of blue dots without making errors.With a Kernel (e.g., RBF or Polynomial): The kernel maps the 2D points into 3D space by adding a new axis, $z = x^2 + y^2$. In 3D, the inner red dots sit at a lower height, while the outer blue dots sit higher up, creating a 3D bowl shape.The Separation: A flat 2D sheet (hyperplane) can now slice horizontally between the two layers in 3D. When projected back down to 2D, this flat sheet appears as a circular decision boundary cleanly separating red from blue.
+
