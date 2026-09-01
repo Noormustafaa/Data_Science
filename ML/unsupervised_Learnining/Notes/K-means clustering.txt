@@ -1,0 +1,18 @@
+K-means clustering:
+
+is an unsupervised learning algorithm that automatically groups similar, unlabeled data points into $K$ distinct clusters based on their features.
+
+Breaking Down the Name
+
+Unsupervised: The data has no predefined labels or "correct answers"—the algorithm finds hidden patterns on its own.
+
+K: The number of groups you instruct the algorithm to create (e.g., $K = 3$ creates 3 groups).
+
+
+Means: The central average point (centroid) of each group.
+
+
+The Elbow Method is a visual and mathematical technique used to find the optimal number of clusters ($K$) for a dataset in K-Means clustering.
+
+
+Why We Use ItK-Means cannot figure out the best $K$ on its own. If you set $K=2$ for data that naturally has 5 groups, your results will be heavily skewed. If you set $K=100$, every data point might become its own useless cluster. The Elbow Method removes the guesswork by calculating the mathematical "tightness" of the clusters for different values of $K$.
